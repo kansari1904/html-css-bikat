@@ -61,7 +61,6 @@ body {
     display: flex;
     gap: 100px;
     overflow-x: auto;
-    margin-left: 100px;
 }
 
 .category {

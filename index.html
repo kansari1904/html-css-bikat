@@ -4,113 +4,187 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bikat-Adventure</title>
+    <title>Adventure App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-     <!-- Discover Section  -->
-    <section class="container">
-        <h2 class="heading">
-            Discover Your Next <br class="mobile-break" /> <span>Adventure</span>
+    <!-- DiscoverSection -->
+    <section class="discover-section">
+
+        <h2 class="discover-heading">
+            Discover Your Next
+            <br class="mobile-break" />
+            <span class="discover-adventure"> Adventure</span>
         </h2>
 
-        <div class="grid">
-            <!-- Repeat items -->
-            <div class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop" />
-                <p>March</p>
+        <div class="discover-grid">
+            <div class="discover-card">
+                <div class="discover-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop"
+                        alt="March" />
+                </div>
+                <p class="discover-label">March</p>
             </div>
-
-            <div class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=1170&auto=format&fit=crop" />
-                <p>April</p>
+            <div class="discover-card">
+                <div class="discover-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=1170&auto=format&fit=crop"
+                        alt="April" />
+                </div>
+                <p class="discover-label">April</p>
             </div>
-
-            <div class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1170&auto=format&fit=crop" />
-                <p>May</p>
+            <div class="discover-card">
+                <div class="discover-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1170&auto=format&fit=crop"
+                        alt="May" />
+                </div>
+                <p class="discover-label">May</p>
             </div>
-
-            <div class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1170&auto=format&fit=crop" />
-                <p>June</p>
+            <div class="discover-card">
+                <div class="discover-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1170&auto=format&fit=crop"
+                        alt="June" />
+                </div>
+                <p class="discover-label">June</p>
             </div>
-
-            <div class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1170&auto=format&fit=crop" />
-                <p>July</p>
+            <div class="discover-card">
+                <div class="discover-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1170&auto=format&fit=crop"
+                        alt="July" />
+                </div>
+                <p class="discover-label">July</p>
             </div>
-
-            <div class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop" />
-                <p>August</p>
+            <div class="discover-card">
+                <div class="discover-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop"
+                        alt="August" />
+                </div>
+                <p class="discover-label">August</p>
             </div>
         </div>
+
     </section>
 
-                <!-- Popular Section  -->
-    <section class="container">
-        <div class="popular-wrapper">
+    <!-- PopularSection -->
+    <section class="popular-section">
+        <div class="popular-inner">
 
-            <!-- LEFT -->
+            <!-- Left text -->
             <div class="popular-text">
-                <h2>Popular Categories</h2>
-                <p>
-                    Browse through these categories to find the best adventure for yourself. We organise Trekking, Cycling, Skiing &
-                    Mountaineering Expeditions. We offer adventure activities in Uttrakhand, Himachal, J & K, Ladakh, Sikkim, Karnataka,
-                    Maharashtra & Nepal
+                <h2 class="popular-heading">Popular Categories</h2>
+                <p class="popular-desc">
+                    Browse through these categories to find the best adventure for yourself.
+                    We organise Trekking, Cycling, Skiing &amp; Mountaineering Expeditions.
+                    We offer adventure activities in Uttrakhand, Himachal, J &amp; K, Ladakh,
+                    Sikkim, Karnataka, Maharashtra, Nepal
                 </p>
             </div>
 
-            <!-- RIGHT (Desktop Scroll) -->
-            <div class="categories desktop">
-                <div class="category">
-                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=200" />
-                    <span>Skiing Courses</span>
+            <!-- Desktop grid (≥1024px) -->
+            <div class="popular-desktop-grid">
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=200&h=200&fit=crop"
+                            alt="Skiing Courses" /></div>
+                    <span class="popular-cat-label">Skiing Courses</span>
                 </div>
-
-                <div class="category">
-                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=200" />
-                    <span>Kayaking Courses</span>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=200&h=200&fit=crop"
+                            alt="Kayaking Courses" /></div>
+                    <span class="popular-cat-label">Kayaking Courses</span>
                 </div>
-
-                <div class="category">
-                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=200" />
-                    <span>6000M+ Peaks</span>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=200&h=200&fit=crop"
+                            alt="6000M+ Peaks" /></div>
+                    <span class="popular-cat-label">6000M+ Peaks</span>
                 </div>
-
-                <div class="category">
-                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=200" />
-                    <span>Nepal Treks</span>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=200&h=200&fit=crop"
+                            alt="Nepal Treks" /></div>
+                    <span class="popular-cat-label">Nepal Treks</span>
+                </div>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"
+                            alt="Offbeat Treks" /></div>
+                    <span class="popular-cat-label">Offbeat Treks</span>
+                </div>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=200&fit=crop"
+                            alt="Scuba Courses" /></div>
+                    <span class="popular-cat-label">Scuba Courses</span>
+                </div>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=200&h=200&fit=crop"
+                            alt="Wild Life Treks" /></div>
+                    <span class="popular-cat-label">Wild Life Treks</span>
+                </div>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=200&h=200&fit=crop"
+                            alt="Winter Treks" /></div>
+                    <span class="popular-cat-label">Winter Treks</span>
                 </div>
             </div>
 
-            <!-- MOBILE GRID -->
-            <div class="categories mobile">
-                <div class="category">
-                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=200" />
-                    <span>Skiing Courses</span>
+            <!-- Mobile grid (<1024px) -->
+            <div class="popular-mobile-grid">
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=200&h=200&fit=crop"
+                            alt="Skiing Courses" /></div>
+                    <span class="popular-cat-label">Skiing Courses</span>
                 </div>
-
-                <div class="category">
-                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=200" />
-                    <span>Kayaking Courses</span>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=200&h=200&fit=crop"
+                            alt="Kayaking Courses" /></div>
+                    <span class="popular-cat-label">Kayaking Courses</span>
                 </div>
-                <div class="category">
-                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=200" />
-                    <span>Nepal Treks</span>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=200&h=200&fit=crop"
+                            alt="6000M+ Peaks" /></div>
+                    <span class="popular-cat-label">6000M+ Peaks</span>
                 </div>
-                <div class="category">
-                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=200" />
-                    <span>6000M+ Peaks</span>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=200&h=200&fit=crop"
+                            alt="Nepal Treks" /></div>
+                    <span class="popular-cat-label">Nepal Treks</span>
+                </div>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"
+                            alt="Offbeat Treks" /></div>
+                    <span class="popular-cat-label">Offbeat Treks</span>
+                </div>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=200&fit=crop"
+                            alt="Scuba Courses" /></div>
+                    <span class="popular-cat-label">Scuba Courses</span>
+                </div>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=200&h=200&fit=crop"
+                            alt="Wild Life Treks" /></div>
+                    <span class="popular-cat-label">Wild Life Treks</span>
+                </div>
+                <div class="popular-cat-item">
+                    <div class="popular-cat-img"><img
+                            src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=200&h=200&fit=crop"
+                            alt="Winter Treks" /></div>
+                    <span class="popular-cat-label">Winter Treks</span>
                 </div>
             </div>
 

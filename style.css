@@ -1,127 +1,391 @@
-body {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
 }
 
-/* Container */
-.container {
-    max-width: 1400px;
-    margin: auto;
-    padding: 20px;
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Heading */
-.heading {
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*DISCOVER SECTION Tailwind: w-full max-w-8xl mx-auto px-4 py-17 */
+
+.discover-section {
+    width: 100%;
+    max-width: 96rem;
+    /* max-w-8xl  = 96rem */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    /* px-4 */
+    padding-right: 1rem;
+    padding-top: 4.25rem;
+    /* py-17  (Tailwind spacing * 0.25rem = 17*0.25=4.25) */
+    padding-bottom: 4.25rem;
+}
+
+/* --- Heading ---*/
+.discover-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    /* text-2xl */
+    font-weight: 600;
+    /* font-semibold */
+    color: #212529;
     text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 40px;
+    line-height: 2rem;
+    /* leading-8 */
+    margin-bottom: 2.1875rem;
+    /* mb-8.75 */
 }
 
+/* br shown only below 420px */
 .mobile-break {
+    display: block;
+}
+
+.discover-adventure {
+    display: block;
+    text-align: center;
+}
+
+/* --- Grid ---
+   px-4 grid grid-cols-2 gap-5
+*/
+.discover-grid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    /* gap-5 */
+}
+
+.discover-card {
+    width: 100%;
+}
+
+/* Image wrapper: aspect ratio 389/177 ≈ 2.198 */
+.discover-img-wrap {
+    width: 100%;
+    aspect-ratio: 389 / 177;
+}
+
+.discover-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    /* rounded-xl */
+}
+
+/* Label: font-medium text-black mt-2 -mb-1 */
+.discover-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    /* text-medium (base) */
+    font-weight: 500;
+    color: #000;
+    margin-top: 0.5rem;
+    /* mt-2 */
+    margin-bottom: -0.25rem;
+    /* -mb-1 */
+}
+
+
+/* POPULAR SECTION Tailwind: w-full max-w-8xl mx-auto px-4 py-8*/
+.popular-section {
+    width: 100%;
+    max-width: 96rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    /* px-4 */
+    padding-right: 1rem;
+    padding-top: 2rem;
+    /* py-8 */
+    padding-bottom: 2rem;
+}
+
+/* Inner flex container: flex flex-col gap-6 */
+.popular-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* gap-6 */
+}
+
+/* Left text block: w-full text-center */
+.popular-text {
+    width: 100%;
+    text-align: center;
+}
+
+.popular-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    /* text-2xl */
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0.75rem;
+    /* mb-3 */
+    text-align: center;
+}
+
+.popular-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    /* text-base */
+    line-height: 1.5rem;
+    /* leading-6 */
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    max-width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Desktop categories row — hidden on mobile */
+.popular-desktop-grid {
     display: none;
 }
 
-/* Grid */
-.grid {
+/* Mobile 4-col grid */
+.popular-mobile-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-}
-
-.card img {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    /* gap-5 */
     width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 25px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 2.25rem;
+    /* py-9 = 9*0.25=2.25rem */
+    padding-bottom: 2.25rem;
 }
 
-.card p {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-/* Popular Section */
-.popular-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.popular-text h2 {
-    text-align: center;
-}
-
-.popular-text p {
-    text-align: center;
-}
-
-/* Categories */
-.categories {
-    display: flex;
-    gap: 100px;
-    overflow-x: auto;
-}
-
-.category {
+/* Shared category item */
+.popular-cat-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
+    /* gap-3 */
+    cursor: pointer;
 }
 
-.category img {
-    width: 100px;
-    height: 100px;
+/* Image circle - mobile size */
+.popular-mobile-grid .popular-cat-img {
+    width: 3rem;
+    /* w-12 */
+    height: 3rem;
     border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Image circle - desktop size */
+.popular-desktop-grid .popular-cat-img {
+    width: 50px;
+    /* lg:max-w-[50px] */
+    height: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.popular-cat-img img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.category span {
-    font-size: 14px;
+.popular-cat-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
+    /* text-sm */
+    color: #212529;
     text-align: center;
 }
 
-/* Mobile */
-.mobile {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
 
-.desktop {
-    display: none;
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-    }
-
-    .heading {
-        font-size: 40px;
-    }
-
+/* ===================================================
+   RESPONSIVE — min-width: 420px
+   .discover-adventure becomes inline
+   .mobile-break hidden
+   =================================================== */
+@media (min-width: 420px) {
     .mobile-break {
         display: none;
     }
 
-    .popular-wrapper {
+    .discover-adventure {
+        display: inline;
+    }
+}
+
+
+/* RESPONSIVE — min-width: 577px  (Tailwind min-[577px]) discover-grid → 3 columns */
+
+@media (min-width: 577px) {
+    .discover-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .discover-label {
+        font-size: 1.125rem;
+        /* sm:text-lg */
+    }
+
+    /* mobile category circles grow */
+    .popular-mobile-grid .popular-cat-img {
+        width: 3.5rem;
+        /* sm:w-14 */
+        height: 3.5rem;
+    }
+
+    .popular-desc {
+        max-width: 450px;
+    }
+}
+
+
+/* RESPONSIVE — min-width: 768px  (md)*/
+
+@media (min-width: 768px) {
+
+    /* Discover */
+    .discover-section {
+        padding-left: 1.5rem;
+        /* md:px-6 */
+        padding-right: 1.5rem;
+        padding-top: 2.5rem;
+        /* md:py-10 */
+        padding-bottom: 2.5rem;
+    }
+
+    .discover-heading {
+        font-size: 1.875rem;
+        /* md:text-3xl */
+        line-height: 2.25rem;
+        /* md:leading-9 */
+    }
+
+    .discover-label {
+        font-size: 1.25rem;
+        /* md:text-xl */
+    }
+
+    /* Popular */
+    .popular-section {
+        padding-left: 1.5rem;
+        /* md:px-6 */
+        padding-right: 1.5rem;
+    }
+
+    .popular-inner {
         flex-direction: row;
+        /* md:flex-row */
         align-items: center;
+        /* md:items-center */
     }
 
     .popular-text {
-        width: 30%;
-        text-align: left;
+        width: 40%;
+        /* md:w-[40%] */
     }
 
-    .desktop {
+    .popular-desc {
+        max-width: 600px;
+    }
+
+    .popular-mobile-grid .popular-cat-img {
+        width: 4rem;
+        /* md:w-16 */
+        height: 4rem;
+    }
+
+    .popular-heading {
+        font-size: 1.875rem;
+        /* md:text-3xl */
+    }
+}
+
+
+/* RESPONSIVE — min-width: 1024px  (lg)*/
+
+@media (min-width: 1024px) {
+
+    /* Discover */
+    .discover-section {
+        padding-left: 0.75rem;
+        /* lg:px-3 */
+        padding-right: 0.75rem;
+    }
+
+    .discover-heading {
+        font-size: 2rem;
+        /* lg:text-[32px] */
+        line-height: 2.4rem;
+        /* lg:leading-[38.4px] */
+    }
+
+    /* Popular */
+    .popular-section {
+        padding-left: 2.5rem;
+        /* lg:px-10 */
+        padding-right: 2.5rem;
+    }
+
+    /* Show desktop grid, hide mobile grid */
+    .popular-desktop-grid {
         display: flex;
         flex: 1;
+        gap: 1rem;
+        /* gap-4 */
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 1.5rem;
+        /* py-6 */
+        padding-bottom: 1.5rem;
     }
 
-    .mobile {
+    .popular-mobile-grid {
         display: none;
+    }
+
+    .popular-desktop-grid .popular-cat-item {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .popular-cat-label {
+        font-size: 1rem;
+        /* lg:text-base */
+    }
+}
+
+
+/* RESPONSIVE — min-width: 1280px  (xl) */
+
+@media (min-width: 1280px) {
+    .popular-desktop-grid .popular-cat-img {
+        width: 90px;
+        /* xl:max-w-[90px] */
+        height: 90px;
+    }
+
+    .popular-cat-label {
+        font-size: 1.125rem;
+        /* xl:text-lg */
     }
 }
